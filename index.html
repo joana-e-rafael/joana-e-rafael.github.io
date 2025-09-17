@@ -5,12 +5,12 @@
     <meta name="theme-color" content="#BC8887" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Undangan Pernikahan [Nama CPW] & [Nama CPP]</title>
+    <title>Joana & Rafael</title>
 
     <meta property="og:title" content="Undangan Pernikahan Nama CPW & Nama CPW - Hari, 21 April 2021">
     <meta property="og:description" content="Undangan Pernikahan Nama CPW & Nama CPW - Sabtu, 21 April 2021 di [Nama Tempat], [Nama Kota]">
     <meta property="og:locale" content="id_ID" />
-    <meta property="og:image" content="https://simple-wedding-invitation.dae.ng/image/sherly-daeng-wedding-thumbnail.png">
+    <meta property="og:image" content="./image/fundo_principal.jpeg">
     <meta property="og:url" content="http://simple-wedding-invitation.dae.ng/index.html">
     <meta name="twitter:card" content="summary_large_image">
     <!-- Bulma Version 0.8.x-->
@@ -94,51 +94,53 @@
         <!-- Begin Hero Content-->
         <div class="hero-body">
           <div class="container has-text-centered">
-            <h1 class="subtitle">Undangan Pernikahan</h1>
-            <h2 class="title">Nama Wanita & Nama Pria</h2>
+            <h2 class="title">Joana Covas & Rafael Moreiras</h2>
             <h4 class="subtitle tempatwaktu">
               
-                Sabtu, 21 April 2021 
+                Sábado, 17 de Junho de 2026
                 </br>
-                [Nama Tempat], [Nama Area]
-                </br>
-                [Nama Kota]
+                Alcainça, Mafra, Portugal
               
             </h4>
           </div>
-          <!-- Start Countdown -->       
-          <div>
+            <!-- Start Countdown -->       
+            <div>
             <ul id="hitungmundur" >
-              <li><span class="days">00</span><p class="days_text">Hari</p></li>
+              <li><span class="days">00</span><p class="days_text">Dias</p></li>
               <li class="separator">:</li>
-              <li><span class="hours">00</span><p class="hours_text">Jam</p></li>
+              <li><span class="hours">00</span><p class="hours_text">Horas</p></li>
               <li class="separator">:</li>
-              <li><span class="minutes">00</span><p class="minutes_text">Menit</p></li>
+              <li><span class="minutes">00</span><p class="minutes_text">Minutos</p></li>
               <li class="separator">:</li>
-              <li><span class="seconds">00</span><p class="seconds_text">Detik</p></li>
+              <li><span class="seconds">00</span><p class="seconds_text">Segundos</p></li>
             </ul>
             <div class="spasi">
             </div>
             <script type="text/javascript">
-              var now = new Date();
-              var day = now.getDate();
-              var month = now.getMonth() + 1;
-              var year = now.getFullYear() + 1;
-          
-              var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
-              var harih = '03/21/2020 17:00:00';
+              var harih = new Date('06/17/2026 00:00:00').getTime();
 
-              $('#hitungmundur').countdown({
-                date: harih, // TODO Date format: 07/27/2017 17:00:00
-                offset: +7, // TODO Your Timezone Offset
-                day: 'Hari',
-                days: 'Hari'
-              }, function () {
-                alert('Done!');
-              });
+              var countdown = setInterval(function() {
+              var now = new Date().getTime();
+              var distance = harih - now;
+
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+              document.querySelector("#hitungmundur .days").innerText = days;
+              document.querySelector("#hitungmundur .hours").innerText = hours;
+              document.querySelector("#hitungmundur .minutes").innerText = minutes;
+              document.querySelector("#hitungmundur .seconds").innerText = seconds;
+
+              if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById("hitungmundur").innerHTML = "O grande dia chegou!";
+              }
+              }, 1000);
             </script>  
-          </div>
-          <!-- End Countdown -->
+            </div>
+            <!-- End Countdown -->
         </div>
         <!-- End Hero Content-->
         <!-- Begin Hero Menu -->
@@ -148,16 +150,16 @@
               <div class="column is-12 hero-menu-desktop has-text-centered">
                 <ul>
                   <li class="is-active">
-                    <a href="#home">Home</a>
+                    <a href="#home">Início</a>
                   </li>
                   <li>
-                    <a href="#Waktu">Waktu</a>
+                    <a href="#Waktu">Horário</a>
                   </li>
                   <li>
-                    <a href="#lokasi">Lokasi</a>
+                    <a href="#lokasi">Localização</a>
                   </li>
                   <li>
-                    <a href="#tentang-pasangan">Tentang CPW & CPP</a>
+                    <a href="#tentang-pasangan">FAQ</a>
                   </li>
 
                   <li>
@@ -179,16 +181,13 @@
     <!-- Begin regular-section-->
      <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
         
-        <div data-aos="fade-up" data-aos-easing="linear">
-          <img src="image/bismillah.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim">
-        </div>
 
         <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
-          Assalamu'alaikum Warahmatullahi Wabarakatuh.
+          Lorem ipsum dolor sit amet.
           <br />
-          Dengan memohon rahmat dan ridha Allah swt, 
+          Lorem ipsum dolor sit amet.
           <br />
-          kami bermaksud mengundang Bapak/Ibu/Saudara/Saudari pada acara pernikahan kami
+          Lorem ipsum dolor sit amet.
         </p>
 
         <span class="space40px"></span>
@@ -196,11 +195,11 @@
 
         <div data-aos="fade-up" data-aos-easing="linear">
           <div class="nama-lengkap" >
-            Nama Calon Mempelai Wanita
+            Lorem ipsum dolor sit amet.
           </div>
           <div class="ampersand">&</div>
           <div class="nama-lengkap">
-          Nama Calon Mempelai Pria
+            Lorem ipsum dolor sit amet.
           </div>
            
         </div>
@@ -218,25 +217,25 @@
         <div class="container">
 
           <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
-            <h1 class="title has-text-centered section-title">Waktu</h1>
+            <h1 class="title has-text-centered section-title">Horário</h1>
           </div>
           <div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
             <div
               class="column is-4 has-vertically-aligned-content">
             
               <p class="is-larger has-text-centered">
-                  <div class="waktu tanggal-hari has-text-centered">Sabtu</div> 
-                  <div class="waktu tanggal-angka has-text-centered">21</div>
-                  <div class="waktu tanggal-bulan has-text-centered">Maret 2020</div>
+                  <div class="waktu tanggal-hari has-text-centered">Sábado</div> 
+                  <div class="waktu tanggal-angka has-text-centered">17</div>
+                  <div class="waktu tanggal-bulan has-text-centered">Junho 2026</div>
               </p>
             
             </div>
             <div class="column is-4 has-vertically-aligned-content">
             
               <p class="waktu is-larger has-text-centered">
-                Akad Nikah:
+                Receção:
                 <br>
-                <strong>17.00 WIB</strong>
+                <strong>HH:MM - HH:MM</strong>
               </p>
             
             </div>
@@ -244,14 +243,13 @@
             <div class="column is-4 has-vertically-aligned-content">
               
               <h1 class="waktu is-larger has-text-centered">
-                Resepsi:
+                Cerimónia:
                 <br>
-                <strong>19.00  - 21.00 WIB</strong>
+                <strong>HH:MM - HH:MM</strong>
               </h1>
               
               
             </div>
-
           </div>
         </div>
         <div class="space40px"></div>
@@ -268,13 +266,13 @@
       <section class="section-darker" id="lokasi" >
         <div class="container">
           <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
-            <h1 class="title has-text-centered section-title">Lokasi</h1>
+            <h1 class="title has-text-centered section-title">Localização</h1>
             <p class="tempat is-larger has-text-centered">
-              <strong>RM Pondok Kenanga</strong>
+              <strong>Alcainça</strong>
               <br>
-              Jl. Kenanga Raya No.9, RT.001/RW.006A, Jakasampurna, 
+              Bla bla bla nºX
               <br>
-              Kec. Bekasi Barat, Kota Bekasi, Jawa Barat
+              2800-000 Mafra, Portugal
               <br>
             </p>
           </div>
@@ -307,9 +305,9 @@
           <div class="tile is-parent">
             <article class="tile is-child foto1 notification foto1" data-aos="fade-up" data-aos-easing="linear">
               <div class="content">
-                <p class="title-foto">November 2018</p>
+                <p class="title-foto">Novembro 2018</p>
                 <p class="subtitle-foto">
-                  Pertama kali saling kenal di <a href="https://google.com" target="_blank">Sebut Nama Tempat</a>
+                  Quisque interdum, sem. 
                 </p>
               </div>
             </article>
@@ -318,10 +316,10 @@
             <article class="tile is-child notification foto2" data-aos="fade-up" data-aos-easing="linear">
               <div class="content">
                 <p class="title-foto">
-                  Desember 2018 - Februari 2019
+                  Dezembro 2018 - Fevereiro 2019
                 </p>
                 <p class="subtitle-foto">
-                  Satu kantor, satu divisi, dan posisi tempat duduk saling membelakangi.
+                  Quisque interdum, sem. 
                 </p>   
               </div>            
             </article>
@@ -330,10 +328,10 @@
             <article class="tile is-child notification foto3" data-aos="fade-up" data-aos-easing="linear">
               <div class="content">  
                 <p class="title-foto">
-                  Maret 2019
+                  Quisque interdum, sem. 
                 </p>
                 <p class="subtitle-foto">
-                  Cerita cinta dimulai
+                  Quisque interdum, sem. 
                 </p>
               </div>
             </article>
@@ -345,24 +343,24 @@
         <div class="tile is-parent">
           <article class="tile is-child notification foto6" data-aos="fade-up" data-aos-easing="linear">
             <div class="content">
-              <p class="title-foto">Juni 2019</p>
-              <p class="subtitle-foto">Pertemuan 2 keluarga</p>
+              <p class="title-foto">Junho 2019</p>
+              <p class="subtitle-foto">Quisque interdum, sem.</p>
             </div>
           </article>
         </div>
         <div class="tile is-parent">
           <article class="tile is-child notification foto4" data-aos="fade-up" data-aos-easing="linear">
             <div class="content">
-              <p class="title-foto">Desember 2019</p>
-              <p class="subtitle-foto">Lamaran</p>
+              <p class="title-foto">Dezembro 2019</p>
+              <p class="subtitle-foto">Quisque interdum, sem.</p>
             </div>
           </article>
         </div>
         <div class="tile is-parent">              
           <article class="tile is-child notification foto5" data-aos="fade-up" data-aos-easing="linear">
             <div class="content">
-              <p class="title-foto">Maret 2020</p>
-              <p class="subtitle-foto">Menikah</p>
+              <p class="title-foto">Março 2020</p>
+              <p class="subtitle-foto">Quisque interdum, sem.</p>
             </div>
           </article>
         </div>
@@ -389,55 +387,35 @@
             </div>
             <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
               <p class="h2 subtitle">
-                Merupakan suatu kehormatan dan kebahagiaan bagi kami
+                Nam eget enim eget felis condimentum ultrices.
                 <br>
-                apabila Bapak/Ibu/Saudara/Saudari berkenan hadir
-                memberikan doa restu.
-                <br>
-                <br>
-                Jika bisa hadir kami tunggu konfirmasinya, 
-                <br>
-                Informasi: Di meja penerima tamu akan kami sediakan hand sanitizer dan pemeriksaan suhu tubuh.
+                Nam eget enim eget felis condimentum ultrices.
                 <br>
                 <br>
-                Jika tidak memungkinkan untuk hadir di pernikahan kami,tidak mengapa,
+                Nam eget enim eget felis condimentum ultrices.
+                <br>
+                Nam eget enim eget felis condimentum ultrices.
+                <br>
+                <br>
+                Nam eget enim eget felis condimentum ultrices.
                 <br> 
-                semoga bisa berjumpa di lain kesempatan
+                Nam eget enim eget felis condimentum ultrices.
                 <br>
                 <br>
-                Stay safe & jaga kesehatan ya :)
+                Nam eget enim eget felis condimentum ultrices.
                 </p>
      
               <a href="https://api.whatsapp.com/send?phone=628xxxxxxxxxx&text=Halo%20CPW,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
                 <i class="fab fa-whatsapp"></i>
-                &nbsp;&nbsp;Kabari CPW
+                &nbsp;&nbsp;Joana Covas
               </a>
               
 
           
               <a href="https://api.whatsapp.com/send?phone=628xxxxxxxxxx&text=Halo%20Daeng,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
                 <i class="fab fa-whatsapp"></i>
-                &nbsp;&nbsp; Kabari CPP
+                &nbsp;&nbsp;Rafael Moreiras
               </a >
-              <div class="space40px"></div>
-
-              <div class="space40px"></div>
-              <div data-aos="fade-up" data-aos-easing="linear">
-                <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
-              </div>
-              <div class="space40px"></div>
-              <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
-                Kami yang berbahagia,
-                <br>
-                <a class="instagram":" href="https://instagram.com/instagramaccount" target="_blank" alt="Instagram CPW">
-                  <i class="fab fa-instagram"></i> @instagramaccount
-                </a>
-                &nbsp
-                <a class="instagram" href="https://instagram.com/instagramaccount" target="_blank" alt="Instagram CPP">
-                  <i class="fab fa-instagram"></i> @instagramaccount
-                </a>
-              </p>
-
             </div>
  
          </div>
@@ -450,14 +428,8 @@
     <!-- Begin Footer -->
     <div class="footer">
       <div class="container">
-        <a href="https://github.com/daengdoang/simple-wedding-invitation" class="has-vertically-align">
-          <p class="has-vertically-align">2020 &copy @daengdoang </p>
-        </a>
-        <a href="https://bulma.io" class="has-vertically-align">
-          <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma">
-        </a>
-        <a href="https://www.netlify.com">
-          <img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg" alt="Deploy with Netlify"/>
+        <a href="https://github.com/joana-e-rafael/joana-e-rafael.github.io" class="has-vertically-align">
+          <p class="has-vertically-align">2025 &copy @filipafranco </p>
         </a>
       </div>
     </div>
