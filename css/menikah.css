@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Raleway|Rouge+Script");
+
 .has-vertically-aligned-content {
   display: flex;
   flex-direction: column;
@@ -9,10 +10,15 @@
   box-sizing: border-box;
 }
 
-html {
+html body {
   font-family: 'Raleway', Tahoma, sans-serif;
-  width: 100%;
+  width: 100;
   min-height: 100%;
+}
+
+.hero.is-large .hero-body {
+  height: 100vh;
+  width: 100%;
 }
 
 .header-wrapper {
@@ -22,17 +28,15 @@ html {
 .navbar-item {
   line-height: 38px;
   font-weight: 600;
-  text-transform: ;
   letter-spacing: 1px;
   font-size: 1rem;
-  box-shadow:  ;
 }
 
-.navbar-item.is-active{
+.navbar-item.is-active {
   border-bottom: 2px solid #996E6D;
 }
 
-.a.navbar-item{
+.a.navbar-item {
   font-color: #996E6D;
 }
 
@@ -41,7 +45,7 @@ html {
   background: linear-gradient(rgba(153, 110, 109, 0.65), rgba(153, 110, 109, 0.65)), rgba(0, 0, 0, 0.55) url("../image/fundo_principal.png") no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: bottom;
+  background-repeat: no-repeat;
   color: white;
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   font-family: 'Raleway', sans-serif;
@@ -67,7 +71,7 @@ html {
 .hero .tempathorario {
   padding-top: 35px;
   font-size: 1.3rem;
-  
+
 }
 
 .hero .hero-foot {
@@ -116,28 +120,31 @@ html {
 }
 
 
-.space40px{
+.space40px {
   height: 40px;
 }
 
-.space24px{
+.space24px {
   height: 24px;
 }
 
 .main-content {
   padding-top: 2rem;
-  color: #000; 
+  color: #000;
   font-family: 'Raleway', sans-serif;
 }
 
 .main-content .section-dark {
   background-color: #F4E2E2;
   padding: 80px 40px;
+  display: block;
+  height: 95vh;
 }
 
 .main-content .section-darker {
-  background-color: #EDD2D1;
-  padding: 80px 40px;
+  background-color: #984d5a;
+  padding: 0;
+  height: 175vh;
 }
 
 .main-content .section-dark.resume {
@@ -176,7 +183,7 @@ html {
 
 .main-content .section-cashbac {
   background-color: rgb(238, 250, 253);
-  padding: 80px 40px; 
+  padding: 80px 40px;
 }
 
 @media (max-width: 599px) {
@@ -203,7 +210,7 @@ html {
 }
 
 .section-map {
-  padding: 0 0 0 0 ;
+  padding: 0 0 0 0;
 }
 
 .main-content .section-light {
@@ -291,8 +298,7 @@ html {
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   color: #996E6D;
-  text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 2.2vh;
   letter-spacing: 0px;
   padding-bottom: 60px;
 }
@@ -307,16 +313,26 @@ html {
 }
 
 .ampersand {
-font-size: 5rem;
-font-family: 'Rouge Script', sans-serif;
-color: #996E6D;
-line-height: 5rem;
-display: inline-block;
-vertical-align: middle;
+  font-size: 5rem;
+  font-family: 'Rouge Script', sans-serif;
+  color: #996E6D;
+  line-height: 5rem;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .bodytext {
+  display: inline-block;
   font-size: 18px;
+  max-width: 150vh;
+}
+
+.historia {
+  text-align: center;
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
 }
 
 .horario {
@@ -334,7 +350,6 @@ vertical-align: middle;
 .tempat {
   font-size: 1.4rem;
   font-family: 'Raleway', sans-serif;
-  font-size: ;
   margin-bottom: 50px;
 }
 
@@ -345,13 +360,14 @@ vertical-align: middle;
 
 .footer {
   bottom: 0;
-  width: 100vw;
+  width: 100%;
+  height: 5vh;
   padding: 10px 10px 10px 10px;
   line-height: 25px;
   text-align: center;
   vertical-align: middle;
   background: #c28285;
-  color: whitesmoke;    
+  color: whitesmoke;
 }
 
 .footer p {
@@ -367,7 +383,7 @@ vertical-align: middle;
   padding-top: 0px;
 }
 
-.footer img{
+.footer img {
   margin: 10px 0px 10px 10px;
   display: inline-block;
   max-height: 24px;
@@ -383,9 +399,9 @@ vertical-align: middle;
 }
 
 .divider {
-  margin: 40px 25px;
+  padding: 40px 25px;
   display: inline-block;
-  max-height: 60px;
+  max-height: 140px;
   vertical-align: middle;
 }
 
@@ -456,7 +472,7 @@ body.preloader-site {
   font-size: 1.2rem;
   border-radius: 10px;
   border: 2px solid #59a543;
-  width:  210px;
+  width: 210px;
   height: 65px;
   align-items: center;
   margin: 1rem;
@@ -465,11 +481,11 @@ body.preloader-site {
 
 .btn-whatsapp {
   background-color: #6cc751;
-  width:  210px;
+  width: 210px;
   height: 65px;
   color: white;
   font-size: 1.2rem;
-  border-radius: 10px;  
+  border-radius: 10px;
   border-left: 1px solid #6cc751;
   border-right: 1px solid #6cc751;
   border-top: 1px solid #6cc751;
@@ -481,12 +497,12 @@ body.preloader-site {
 
 
 .btn-cta:hover {
-  color:white;
+  color: white;
   background-color: #bf7877;
   font-size: 1.2rem;
   border-radius: 10px;
   border: 2px solid #bf7877;
-  width:  210px;
+  width: 210px;
   height: 65px;
   align-items: center;
   margin: 1rem;
@@ -494,7 +510,7 @@ body.preloader-site {
 
 .btn-cta {
   background-color: #996E6D;
-  width:  210px;
+  width: 210px;
   height: 65px;
   color: white;
   font-size: 1.2rem;
@@ -521,7 +537,7 @@ body.preloader-site {
   height: 55px;
   max-width: 180px;
   border: 2px solid #26ade4;
-  border-radius: 10px 0 0 10px  ;
+  border-radius: 10px 0 0 10px;
   font-size: 24px;
   padding: 15px;
 }
@@ -542,15 +558,31 @@ body.preloader-site {
 .fa-copy {
   margin-right: 5px;
 }
-.white
-{color:ghostwhite}
+
+.white {
+  color: ghostwhite
+}
 
 
-.dusty-pink {color: #D8A9A8}
-.dusty-pink-lighter {color: #EDD2D1}
-.dusty-pink-lightest {color: #F4E2E2}
-.dusty-pink-darker {color: #BC8887}
-.dusty-pink-darkest {color: #996E6D}
+.dusty-pink {
+  color: #D8A9A8
+}
+
+.dusty-pink-lighter {
+  color: #EDD2D1
+}
+
+.dusty-pink-lightest {
+  color: #F4E2E2
+}
+
+.dusty-pink-darker {
+  color: #BC8887
+}
+
+.dusty-pink-darkest {
+  color: #996E6D
+}
 
 .tile {
   border-radius: 10px;
@@ -561,7 +593,7 @@ body.preloader-site {
   background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/foto_chicago_bulls.png");
   background-size: cover;
   background-position: center;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   min-height: 24rem;
 }
 
@@ -570,7 +602,7 @@ body.preloader-site {
   background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/foto_chicago_bulls.png");
   background-size: cover;
   background-position: center;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   min-height: 24rem;
 }
 
@@ -578,7 +610,7 @@ body.preloader-site {
   background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/foto_chicago_bulls.png");
   background-size: cover;
   background-position: top;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   min-height: 24rem;
 }
 
@@ -586,7 +618,7 @@ body.preloader-site {
   background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/foto_chicago_bulls.png");
   background-size: cover;
   background-position: top;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   min-height: 24rem;
 }
 
@@ -594,7 +626,7 @@ body.preloader-site {
   background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/foto_chicago_bulls.png");
   background-size: cover;
   background-position: center;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   min-height: 24rem;
 }
 
@@ -603,7 +635,7 @@ body.preloader-site {
   background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/foto_chicago_bulls.png");
   background-size: cover;
   background-position: center;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   min-height: 24rem;
 }
 
@@ -645,23 +677,31 @@ body.preloader-site {
   text-align: center;
   padding: 10px;
 }
+
 .slideshow-container {
   position: relative;
   max-width: 100%;
   height: 70vh;
   margin: auto;
   overflow: hidden;
-  display: flex;
   align-items: center;
   background-color: #F4E2E2;
   justify-content: center;
 }
 
+#gallery2 {
+  background-color:#984d5a;
+  width: 100%;
+}
+
 .slide {
-  display: none;
+  display: flex;
+  justify-content: center;
+  /* centra horizontalmente */
+  align-items: center;
+  /* centra verticalmente */
   width: 100%;
   height: 100%;
-  text-align: center;
 }
 
 .slide img {
@@ -671,40 +711,55 @@ body.preloader-site {
 }
 
 /* Botões de navegação */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 1.8rem;          /* largura fixa */
-  height: 1.8rem;         /* altura fixa */
-  line-height: 1.8rem;    /* centra verticalmente o símbolo */
-  text-align: center;   /* centra horizontalmente */
+  width: 1.8rem;
+  /* largura fixa */
+  height: 1.8rem;
+  /* altura fixa */
+  line-height: 1.8rem;
+  /* centra verticalmente o símbolo */
+  text-align: center;
+  /* centra horizontalmente */
   color: white;
   font-weight: bold;
   font-size: 1rem;
-  border-radius: 50%;   /* círculo perfeito */
-  background-color: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  /* círculo perfeito */
+  background-color: rgba(0, 0, 0, 0.4);
   user-select: none;
   transition: background-color 0.3s;
 }
 
 
-.prev { left: 20px; }
-.next { right: 20px; }
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
 
 
 .title-container {
   display: flex;
-  align-items: center;        /* centraliza verticalmente */
-  justify-content: center;    /* mantém tudo centrado */
-  gap: 12px;                  /* espaço entre folhas e título */
+  align-items: center;
+  /* centraliza verticalmente */
+  justify-content: center;
+  /* mantém tudo centrado */
+  gap: 12px;
+  /* espaço entre folhas e título */
   text-align: center;
   width: 100%;
 }
 
 .title-container .divider {
   height: auto;
+  max-width: 30vw;
 }
 
 .title-container .title {
@@ -714,3 +769,67 @@ body.preloader-site {
 .title-container .divider-right {
   transform: scaleX(-1);
 }
+
+.container {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+iframe {
+  width: 90vw;
+  height: 70vh;
+  display: inline-block;
+}
+
+.iframe-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+.columns {
+  max-width: 100vw;
+}
+
+.hero-body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.save_date_video_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  padding:2vh;
+}
+
+.save_date_video_container video{
+  height: 90vh;
+  width: auto;
+}
+
+.save_date_image_container img {
+  height: 90vh;
+  width: auto;
+}
+
+.save_date_image_container {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding:2vh;
+  align-items: center;
+}
+
+
+.save_date_container {
+  width: 100%;
+  display: flex;
+  padding: 3vh;
+}
+
