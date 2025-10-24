@@ -134,17 +134,15 @@ html body {
   font-family: 'Raleway', sans-serif;
 }
 
-.main-content .section-dark {
+.section-dark {
   background-color: #F4E2E2;
-  padding: 80px 40px;
-  display: block;
-  height: 95vh;
+  padding: 3vh 2vw;
+  min-height: 95vh;
 }
 
 .main-content .section-darker {
   background-color: #984d5a;
-  padding: 0;
-  height: 175vh;
+  padding: 3vh 2vw;
 }
 
 .main-content .section-dark.resume {
@@ -294,11 +292,11 @@ html body {
   padding: 20px;
 }
 
-.main-content .section-title {
+.section-title {
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   color: #996E6D;
-  font-size: 2.2vh;
+  font-size: 3vh;
   letter-spacing: 0px;
   padding-bottom: 60px;
 }
@@ -362,7 +360,7 @@ html body {
   bottom: 0;
   width: 100%;
   height: 5vh;
-  padding: 10px 10px 10px 10px;
+  padding: .5vh;
   line-height: 25px;
   text-align: center;
   vertical-align: middle;
@@ -399,12 +397,12 @@ html body {
 }
 
 .divider {
-  padding: 40px 25px;
+  padding: 2vh 2vw;
   display: inline-block;
-  max-height: 140px;
+  max-height: 70px;
   vertical-align: middle;
 }
-
+ 
 #toTop {
   height: 50px;
   width: 50px;
@@ -803,11 +801,11 @@ iframe {
   justify-content: flex-start;
   align-items: center;
   height: 100%;
-  width: 50%;
-  padding:2vh;
+  min-width: 50%;
+  padding: 2vh;
 }
 
-.save_date_video_container video{
+.save_date_video_container video {
   height: 90vh;
   width: auto;
 }
@@ -819,17 +817,40 @@ iframe {
 
 .save_date_image_container {
   height: 100%;
-  width: 50%;
+  min-width: 50%;
   display: flex;
   justify-content: flex-end;
-  padding:2vh;
+  padding: 2vh;
   align-items: center;
 }
-
 
 .save_date_container {
   width: 100%;
   display: flex;
   padding: 3vh;
 }
+
+/* Quando o ecrã for estreito, empilha os divs */
+@media (max-width: 900px) {
+  .save_date_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .save_date_image_container,
+  .save_date_video_container {
+    max-width: 100%;
+    justify-content: center;
+    padding: 1vh 0;
+  }
+
+  .save_date_image_container img,
+  .save_date_video_container video {
+    height: auto;
+    width: 90%;
+  }
+}
+
+
+
 
