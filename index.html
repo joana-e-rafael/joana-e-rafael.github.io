@@ -202,60 +202,10 @@
         <div class="space40px"></div>
 
         <div class="slideshow-container" id="gallery1">
-          <div class="slide slide1"><img src="image/galeria1/foto1.jpeg" alt="Foto 1"></div>
-          <div class="slide slide1"><img src="image/galeria1/foto2.jpeg" alt="Foto 2"></div>
-          <div class="slide slide1"><img src="image/galeria1/foto3.jpeg" alt="Foto 3"></div>
-          <div class="slide slide1"><img src="image/galeria1/foto4.jpeg" alt="Foto 4"></div>
-          <div class="slide slide1"><img src="image/galeria1/foto5.jpeg" alt="Foto 5"></div>
-          <div class="slide slide1"><img src="image/galeria1/foto6.jpeg" alt="Foto 6"></div>
-          <div class="slide slide1"><img src="image/galeria1/foto7.jpeg" alt="Foto 7"></div>
-          <div class="slide slide1"><img src="image/galeria1/foto8.jpeg" alt="Foto 8"></div>
-          <div class="slide slide1"><img src="image/galeria1/foto9.jpeg" alt="Foto 9"></div>
-          <div class="slide slide1"><img src="image/galeria1/foto10.jpeg" alt="Foto 10"></div>
-          <div class="slide slide1"><img src="image/galeria1/foto11.jpeg" alt="Foto 11"></div>
-
           <a class="prev" onclick="plusSlides(1,-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1,1)">&#10095;</a>
-        </div>
+      </div>
 
-        <script>
-          // Armazena o estado de cada galeria separadamente
-          const galleries = {
-            1: { index: 0, timer: null, className: "slide1" },
-            2: { index: 0, timer: null, className: "slide2" },
-          };
-        
-          function showSlides(galleryNum, n) {
-            const gallery = galleries[galleryNum];
-            const slides = document.getElementsByClassName(gallery.className);
-        
-            if (n !== undefined) {
-              gallery.index += n;
-            } else {
-              gallery.index++;
-            }
-        
-            if (gallery.index >= slides.length) gallery.index = 0;
-            if (gallery.index < 0) gallery.index = slides.length - 1;
-        
-            for (let i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
-            }
-        
-            slides[gallery.index].style.display = "flex";
-        
-            clearTimeout(gallery.timer);
-            gallery.timer = setTimeout(() => showSlides(galleryNum), 3000); // muda a cada 3s
-          }
-        
-          function plusSlides(galleryNum, n) {
-            showSlides(galleryNum, n);
-          }
-        
-          // inicia as duas galerias
-          showSlides(1);
-          showSlides(2);
-        </script>
         
       </div>
       <span class="space40px"></span>
@@ -277,27 +227,11 @@
           </video>
         </div>
       </div>
-      <div class="slideshow-container" id="gallery2">
-        <div class="slide slide2"><img src="image/galeria2/foto1.JPG" alt="Foto 1"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto2.JPG" alt="Foto 2"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto3.JPG" alt="Foto 3"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto4.JPG" alt="Foto 4"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto5.JPG" alt="Foto 5"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto6.JPG" alt="Foto 6"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto7.JPG" alt="Foto 7"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto8.JPG" alt="Foto 8"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto9.JPG" alt="Foto 9"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto10.JPG" alt="Foto 10"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto11.JPG" alt="Foto 11"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto12.JPG" alt="Foto 12"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto13.JPG" alt="Foto 13"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto14.JPG" alt="Foto 14"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto15.JPG" alt="Foto 15"></div>
-        <div class="slide slide2"><img src="image/galeria2/foto16.JPG" alt="Foto 16"></div>
 
+      <div class="slideshow-container" id="gallery2">
         <a class="prev" onclick="plusSlides(2,-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(2,1)">&#10095;</a>
-      </div>
+    </div>
 
   </div>
   </section>
@@ -345,6 +279,66 @@
       easing: "ease-out",
       duration: 800,
     });
+  </script>
+  <script>
+    // 1. DEFINA OS NOMES DAS FOTOS AQUI
+    const fotosG1 = ["2017_10.png","2018_01.JPG","2020_01 (3).JPG","2020_02.JPG","2020_05.JPG","2020_08.JPG","2021_04.JPG","20220902_151513.jpg","2022_06.jpeg","2022_07.jpg","20230129_162529.jpg","20230130_151353.jpg","20230803_181358.jpg","20230804_131652.jpg","20230804_175005.jpg","20230806_210303.jpg","20240921_225509.jpg","20250101_155650(0).jpg","20250328_120532.jpeg","20250328_194420.jpeg","20250328_194425.jpeg","20250420_011310.jpeg","20250420_180603(0).jpeg","20250420_182015.jpeg","20250420_182117(0).jpeg","20250420_182144.jpeg","20251014_155401(0) (1).jpg","20251014_174724.jpeg","IMG-20230625-WA0134.jpg","IMG-20240831-WA0005.jpg","IMG-20250215-WA0091.jpg","IMG-20250215-WA0116.jpg","IMG-20250401-WA0269.jpg","IMG-20250414-WA0114.jpg","M04A4872.jpg","foto.jpeg","foto1.jpeg","foto10.jpeg","foto11.jpeg","foto12.jpeg","foto13.jpg","foto14.JPG","foto15.jpg","foto16.jpg","foto17.jpg","foto18.jpg","foto19.jpg","foto2.jpeg","foto20.jpg","foto21.jpg","foto22.jpg","foto23.jpg","foto24.jpg","foto25.jpg","foto26.jpg","foto27.jpg","foto28.jpg","foto29.jpeg","foto3.jpeg","foto30.jpeg","foto31.jpeg","foto32.jpeg","foto33.jpeg","foto34.jpeg","foto35.jpeg","foto36.jpeg","foto37.jpg","foto38.jpeg","foto39.jpeg","foto4.jpeg","foto40.jpeg","foto41.jpg","foto42.jpg","foto43.jpg","foto44.jpg","foto45.jpg","foto46.jpg","foto47.jpg","foto48.jpg","foto49.jpg","foto5.jpeg","foto50.jpg","foto51.jpg","foto52.jpg","foto53.jpg","foto54.jpg","foto55.jpg","foto56.jpg","foto57.jpg","foto58.PNG","foto59.JPG","foto6.jpeg","foto60.JPG","foto61.JPG","foto62.JPEG","foto63.JPG","foto64.jpg","foto65.JPG","foto66.JPG","foto67.JPG","foto68.JPG","foto69.JPG","foto7.jpeg","foto70.JPG","foto71.JPG","foto72.PNG","foto73.JPG","foto8.jpeg","foto9.jpeg"];
+    const fotosG2 = ["foto1.JPG","foto10.JPG","foto11.JPG","foto12.JPG","foto13.JPG","foto14.JPG","foto15.JPG","foto16.JPG","foto2.JPG","foto3.JPG","foto4.JPG","foto5.JPG","foto6.JPG","foto7.JPG","foto8.JPG","foto9.JPG"];
+  
+    // 2. FUNÇÃO PARA GERAR OS SLIDES AUTOMATICAMENTE
+    function gerarSlides(idContainer, listaFotos, classeSlide, pasta) {
+      const container = document.getElementById(idContainer);
+      const btnPrev = container.querySelector('.prev');
+      
+      listaFotos.forEach(nomeFoto => {
+        const div = document.createElement('div');
+        div.className = `slide ${classeSlide}`;
+        div.innerHTML = `<img src="image/${pasta}/${nomeFoto}" alt="${nomeFoto}">`;
+        container.insertBefore(div, btnPrev); // Insere antes dos botões de navegação
+      });
+    }
+  
+    // Executa a criação
+    gerarSlides('gallery1', fotosG1, 'slide1', 'galeria1');
+    gerarSlides('gallery2', fotosG2, 'slide2', 'galeria2');
+  
+    // 3. LÓGICA DE FUNCIONAMENTO (A que você já tinha, levemente ajustada)
+    const galleries = {
+      1: { index: 0, timer: null, className: "slide1" },
+      2: { index: 0, timer: null, className: "slide2" },
+    };
+  
+    function showSlides(galleryNum, n) {
+      const gallery = galleries[galleryNum];
+      const slides = document.getElementsByClassName(gallery.className);
+      if (slides.length === 0) return;
+  
+      if (n !== undefined) {
+        gallery.index += n;
+      } else {
+        gallery.index++;
+      }
+  
+      if (gallery.index >= slides.length) gallery.index = 0;
+      if (gallery.index < 0) gallery.index = slides.length - 1;
+  
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+  
+      slides[gallery.index].style.display = "flex";
+  
+      clearTimeout(gallery.timer);
+      gallery.timer = setTimeout(() => showSlides(galleryNum), 3000);
+    }
+  
+    function plusSlides(galleryNum, n) {
+      showSlides(galleryNum, n);
+    }
+  
+    // Iniciar após carregar os elementos
+    showSlides(1);
+    showSlides(2);
   </script>
 </body>
 
