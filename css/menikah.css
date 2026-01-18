@@ -402,7 +402,7 @@ html body {
   max-height: 70px;
   vertical-align: middle;
 }
- 
+
 #toTop {
   height: 50px;
   width: 50px;
@@ -688,7 +688,7 @@ body.preloader-site {
 }
 
 #gallery2 {
-  background-color:#984d5a;
+  background-color: #984d5a;
   width: 100%;
 }
 
@@ -850,7 +850,3 @@ iframe {
     width: 90%;
   }
 }
-
-
-
-
