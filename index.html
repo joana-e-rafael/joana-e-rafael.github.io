@@ -88,7 +88,7 @@
                 </a>
               </div>
               <div class="navbar-item">
-                <a class="navbar-item" href="presentes.html">
+                <a class="navbar-item" href="#presentes-section">
                   Lista de Presentes
                 </a>
               </div>
@@ -177,7 +177,7 @@
                   <a href="#rsvp">RSVP</a>
                 </li>
                 <li>
-                  <a href="presentes.html">Lista de Presentes</a>
+                  <a href="#presentes-section">Lista de Presentes</a>
                 </li>
               </ul>
             </div>
@@ -279,10 +279,130 @@
       mais comuns, em caso de dúvidas adicionais, não hesitem em contactar-nos diretamente.
     </p>
     <div class="space40px"></div>
+  </section>
+  <!-- End Informações Gerais Content-->
+
+  <!-- Begin Lista de Presentes Content -->
+  <section class="regular-section has-text-centered" id="presentes-section">
+    <style>
+      :root {
+        --wedding-pink: #BC8887;
+      }
+
+      .gift-card {
+        background: white;
+        border-radius: 12px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        border: 1px solid #eee;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .gift-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .gift-image-container {
+        width: 100%;
+        height: 200px;
+        background-color: #f9f9f9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .gift-image-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        padding: 5px;
+      }
+
+      .gift-content {
+        padding: 15px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .gift-title {
+        font-weight: 600;
+        color: #4a4a4a;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        min-height: 3em;
+      }
+
+      .gift-price {
+        color: var(--wedding-pink);
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .btn-contribute {
+        background-color: var(--wedding-pink);
+        color: white !important;
+        border-radius: 25px;
+        font-weight: 600;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .mbway-number {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #4a4a4a;
+      }
+
+      .name-label {
+        color: var(--wedding-pink);
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+    </style>
+
+    <div class="container">
+      <div class="nama-lengkap">Lista de Presentes 🎁</div>
+      <p class="bodytext">A vossa presença é o nosso maior presente! Se ainda assim quiserem mimar os noivos, aqui ficam
+        algumas ideias simbólicas:</p>
+
+      <div class="columns is-multiline" id="gift-list-main" style="margin-top: 30px;">
+      </div>
+    </div>
+
+    <div id="modal-mbway" class="modal">
+      <div class="modal-background" onclick="fecharModal()"></div>
+      <div class="modal-content">
+        <div class="box has-text-centered">
+          <h3 class="title is-4">Contribuir via MB WAY 📱</h3>
+          <p class="mb-5">Podem enviar a vossa contribuição para qualquer um dos noivos:</p>
+          <div class="columns">
+            <div class="column">
+              <p class="name-label">Noiva (Joana)</p>
+              <p class="mbway-number">962 094 829</p>
+            </div>
+            <div class="column">
+              <p class="name-label">Noivo (Rafael)</p>
+              <p class="mbway-number">969 984 977</p>
+            </div>
+          </div>
+          <button class="button is-light mt-4 is-rounded" onclick="fecharModal()">Fechar</button>
+        </div>
+      </div>
+      <button class="modal-close is-large" aria-label="close" onclick="fecharModal()"></button>
+    </div>
+    <div class="space40px"></div>
     <div class="space40px"></div>
   </section>
-
-  <!-- End Informações Gerais Content-->
+  <!-- End Lista de Presentes Content-->
   <!-- Begin FAQ Content-->
   <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content"
     id="faq">
@@ -370,7 +490,8 @@
             Gostaríamos que se esmerassem neste dia especial. O estilo é formal, no entanto, não é necessário um vestido
             de tapete vermelho nem um fato de gala completo. Evitem vestidos muito compridos ou roupa que arraste no
             chão (as condições de pavimento não vão ser as melhores pois incluem parte com terra e relva) e optem por
-            sapatos confortáveis, <strong>de preferência rasos ou com salto baixo</strong>. Prometemos muitas horas em pé, fotos e dança.<br><br>
+            sapatos confortáveis, <strong>de preferência rasos ou com salto baixo</strong>. Prometemos muitas horas em
+            pé, fotos e dança.<br><br>
             <strong>Atenção:</strong> Não é permitido irem vestidos de branco, cremes, nudes, ou tons parecidos com
             branco como ivory, pérola, marfim, entre outros e evitem cores como vermelho e bordô.
           </div>
@@ -459,7 +580,7 @@
         <details>
           <summary>15. Existe lista de presentes?</summary>
           <div class="faq-content">
-            A vossa presença é o melhor presente. Contudo, existe uma <a href="presentes.html"
+            A vossa presença é o melhor presente. Contudo, existe uma <a href="#presentes-section"
               style="color: #BC8887; text-decoration: underline;">pequena lista no site</a> para quem quiser contribuir.
           </div>
         </details>
@@ -550,7 +671,7 @@
   </script>
   <script>
     // 1. DEFINA OS NOMES DAS FOTOS AQUI
-    const fotosG1 = ["2017_10.png", "2018_01.JPG", "2020_01 (3).JPG", "2020_02.JPG", "2020_05.JPG", "2020_08.JPG", "2021_04.JPG", "20220902_151513.jpg", "2022_06.jpeg", "2022_07.jpg", "20230129_162529.jpg", "20230130_151353.jpg", "20230803_181358.jpg", "20230804_131652.jpg", "20230804_175005.jpg", "20230806_210303.jpg", "20240921_225509.jpg", "20250101_155650(0).jpg", "20250328_120532.jpeg", "20250328_194420.jpeg", "20250328_194425.jpeg", "20250420_011310.jpeg", "20250420_180603(0).jpeg", "20250420_182015.jpeg", "20250420_182117(0).jpeg", "20250420_182144.jpeg", "20251014_155401(0) (1).jpg", "20251014_174724.jpeg", "IMG-20230625-WA0134.jpg", "IMG-20240831-WA0005.jpg", "IMG-20250215-WA0091.jpg", "IMG-20250215-WA0116.jpg", "IMG-20250401-WA0269.jpg", "IMG-20250414-WA0114.jpg", "M04A4872.jpg", "foto.jpeg", "foto1.jpeg", "foto10.jpeg", "foto11.jpeg", "foto12.jpeg", "foto13.jpg", "foto14.JPG", "foto15.jpg", "foto16.jpg", "foto17.jpg", "foto18.jpg", "foto19.jpg", "foto2.jpeg", "foto20.jpg", "foto21.jpg", "foto22.jpg", "foto23.jpg", "foto24.jpg", "foto25.jpg", "foto26.jpg", "foto27.jpg", "foto28.jpg", "foto29.jpeg", "foto3.jpeg", "foto30.jpeg", "foto31.jpeg", "foto32.jpeg", "foto33.jpeg", "foto34.jpeg", "foto35.jpeg", "foto36.jpeg", "foto37.jpg", "foto38.jpeg", "foto39.jpeg", "foto4.jpeg", "foto40.jpeg", "foto41.jpg", "foto42.jpg", "foto43.jpg", "foto44.jpg", "foto45.jpg", "foto46.jpg", "foto47.jpg", "foto48.jpg", "foto49.jpg", "foto5.jpeg", "foto50.jpg", "foto51.jpg", "foto52.jpg", "foto53.jpg", "foto54.jpg", "foto55.jpg", "foto56.jpg", "foto57.jpg", "foto58.PNG", "foto59.JPG", "foto6.jpeg", "foto60.JPG", "foto61.JPG", "foto62.JPEG", "foto63.JPG", "foto64.jpg", "foto65.JPG", "foto66.JPG", "foto67.JPG", "foto68.JPG", "foto69.JPG", "foto7.jpeg", "foto70.JPG", "foto71.JPG", "foto72.PNG", "foto73.JPG", "foto8.jpeg", "foto9.jpeg"];
+    const fotosG1 = ["foto70.JPG","foto5.jpeg","foto22.jpg","M04A4872.jpg","foto66.JPG","20251014_155401(0) (1).jpg","20250328_194420.jpeg","2021_04.JPG","foto71.JPG","20230129_162529.jpg","foto15.jpg","foto42.jpg","foto.jpeg","foto63.JPG","foto38.jpeg","IMG-20240831-WA0005.jpg","foto53.jpg","20230806_210303.jpg","foto33.jpeg","foto54.jpg","foto58.PNG","foto2.jpeg","foto6.jpeg","foto31.jpeg","foto37.jpg","20220902_151513.jpg","foto49.jpg","foto46.jpg","2020_01 (3).JPG","IMG-20230625-WA0134.jpg","2018_01.JPG","foto48.jpg","foto73.JPG","20240921_225509.jpg","20230803_181358.jpg","foto60.JPG","20250420_182015.jpeg","IMG-20250401-WA0269.jpg","foto69.JPG","foto4.jpeg","foto13.jpg","foto7.jpeg","foto8.jpeg","foto62.JPEG","20230130_151353.jpg","foto47.jpg","foto28.jpg","20250101_155650(0).jpg","foto16.jpg","foto56.jpg","foto40.jpeg","20250328_120532.jpeg","IMG-20250215-WA0091.jpg","foto29.jpeg","foto23.jpg","2017_10.png","foto36.jpeg","20250420_182144.jpeg","20230804_175005.jpg","foto18.jpg","IMG-20250215-WA0116.jpg","foto72.PNG","20230804_131652.jpg","foto43.jpg","foto30.jpeg","foto24.jpg","2020_05.JPG","foto19.jpg","IMG-20250414-WA0114.jpg","foto41.jpg","foto59.JPG","foto26.jpg","foto17.jpg","foto61.JPG","foto45.jpg","foto52.jpg","foto14.JPG","foto51.jpg","foto27.jpg","foto12.jpeg","2020_08.JPG","foto67.JPG","foto20.jpg","2022_07.jpg","foto39.jpeg","foto32.jpeg","foto64.jpg","foto25.jpg","2020_02.JPG","foto21.jpg","20251014_174724.jpeg","foto68.JPG"];
     const fotosG2 = ["foto1.JPG", "foto10.JPG", "foto11.JPG", "foto12.JPG", "foto13.JPG", "foto14.JPG", "foto15.JPG", "foto16.JPG", "foto2.JPG", "foto3.JPG", "foto4.JPG", "foto5.JPG", "foto6.JPG", "foto7.JPG", "foto8.JPG", "foto9.JPG"];
 
     // 2. FUNÇÃO PARA GERAR OS SLIDES AUTOMATICAMENTE
@@ -607,6 +728,53 @@
     // Iniciar após carregar os elementos
     showSlides(1);
     showSlides(2);
+  </script>
+  <script>
+    const mainGifts = [
+      { title: "Atirar o buquê na tua direção 💐", price: "5€", img: "buque.gif" },
+      { title: "Taxa para a noiva não atirar o buquê à tua namorada 🚫", price: "5€", img: "taxa-buque.jpeg" },
+      { title: "Só para não dizer que não dei nada 💸", price: "0,01€", img: "nada.jpeg" },
+      { title: "Prioridade na fila do Buffet 🍽️", price: "10€", img: "buffet.gif" },
+      { title: "Comparticipa na despedida de solteiro 🥂", price: "3€", img: "despedida.jpeg" },
+      { title: "Colher de pau para o noivo se comportar 🥄", price: "2,99€", img: "colher.jpg" },
+      { title: "Prioridade ao sofá-cama no Carnaval 🎭", price: "12€", img: "carnaval.jpeg" },
+      { title: "Roupa sexy para a noite de núpcias 🔥", price: "3,69€", img: "nupcias.jpeg" },
+      { title: "Ser o nosso convidado preferido ⭐", price: "15€", img: "preferido.jpeg" },
+      { title: "Terapia de casal para os noivos 🧘", price: "4€", img: "terapia.jpeg" },
+      { title: "Um ano de corte de cabelo para o noivo ✂️", price: "8€", img: "cabelo.jpeg" },
+      { title: "Quota para perguntar quando vem os filhos 👶", price: "10,5€", img: "filhos.jpeg" },
+      { title: "Cobertor para o noivo estar coberto de razão 🛌", price: "9€", img: "razao.jpeg" },
+      { title: "Levar alguém que não foi convidado 😱", price: "200€", img: "intruso.gif" },
+      { title: "Tampão de ouvido para a noiva 👂", price: "2,5€", img: "ronco.jpeg" },
+      { title: "Voucher para babysitting futuro 🍼", price: "1€", img: "baby.gif" }
+    ];
+  
+    const giftGrid = document.getElementById('gift-list-main');
+  
+    if(giftGrid) {
+      mainGifts.forEach(gift => {
+        const html = `
+          <div class="column is-12-mobile is-4-tablet is-3-desktop">
+            <div class="gift-card">
+              <div class="gift-image-container">
+                <img src="image/presentes/${gift.img}" alt="${gift.title}" onerror="this.src='https://via.placeholder.com/300x200?text=Presente'">
+              </div>
+              <div class="gift-content">
+                <div>
+                  <h3 class="gift-title">${gift.title}</h3>
+                  <p class="gift-price">a partir de ${gift.price}</p>
+                </div>
+                <button class="button btn-contribute" onclick="abrirModal()">Contribuir</button>
+              </div>
+            </div>
+          </div>
+        `;
+        giftGrid.innerHTML += html;
+      });
+    }
+  
+    function abrirModal() { document.getElementById('modal-mbway').classList.add('is-active'); }
+    function fecharModal() { document.getElementById('modal-mbway').classList.remove('is-active'); }
   </script>
 </body>
 
